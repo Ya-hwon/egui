@@ -1,0 +1,23 @@
+[package]
+name = "datetime_picker"
+version = "0.1.0"
+authors = ["Yahwon <yahwon@yahwon.de>"]
+license = "MIT OR Apache-2.0"
+edition = "2021"
+rust-version = "1.70"
+publish = false
+
+
+[dependencies]
+chrono = "0.4.31"
+eframe = { path = "../../crates/eframe", features = [
+    "__screenshot", # __screenshot is so we can dump a screenshot using EFRAME_SCREENSHOT_TO
+] }
+
+# For image support:
+egui_extras = { path = "../../crates/egui_extras", features = [
+    "image",
+    "datepicker",
+] }
+
+env_logger = "0.10"

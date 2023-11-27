@@ -13,6 +13,9 @@
 #[cfg(feature = "chrono")]
 mod datepicker;
 
+#[cfg(feature = "chrono")]
+mod datetimepicker;
+
 pub mod syntax_highlighting;
 
 #[doc(hidden)]
@@ -25,6 +28,9 @@ mod table;
 
 #[cfg(feature = "chrono")]
 pub use crate::datepicker::DatePickerButton;
+
+#[cfg(feature = "chrono")]
+pub use crate::datetimepicker::DateTimePickerButton;
 
 #[doc(hidden)]
 #[allow(deprecated)]
